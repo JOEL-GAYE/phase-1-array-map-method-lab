@@ -14,14 +14,12 @@ const tutorials = [
 
 // Function to capitalize the first letter of each word
 function titleCased() {
-  return tutorials.map((tutorial) => {
+  return tutorials.map(tutorial => {
     return tutorial
-      .split(" ") // Split the tutorial into words
-      .map((word) => {
+      .split(' ') // Split each title into words
+      .map(word => {
         return word.charAt(0).toUpperCase() + word.slice(1); // Capitalize the first letter
       })
-      .join(" "); // Join the words back into a string
+      .join(' '); // Rejoin the words into a single string
   });
 }
-
-console.log(titleCased());
